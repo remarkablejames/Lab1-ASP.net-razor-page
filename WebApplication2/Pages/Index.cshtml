@@ -1,0 +1,33 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Statistics</h1>
+    <p>Enter one, two or three numerical numbers and click calculate button to get their statistics</p>
+    <form method="post">
+        <div>
+            <label for="Number1">Number 1</label>
+            <input type="number" id="Number1" name="Number1"/>
+        </div>
+        
+        <div>
+            <label for="Number2">Number 2</label>
+            <input type="number" id="Number2" name="Number2"/>
+        </div>
+        
+        <div>
+            <label for="Number3">Number 3</label>
+            <input type="number" id="Number3" name="Number3"/>
+        </div>
+        
+        <button type="submit" class="btn btn-primary" >Calculate</button>
+
+    </form>
+    @if(Model.Result != null)
+    {
+        <p>Sum: @Model.Result</p>
+    }
+</div>
