@@ -20,15 +20,34 @@ public class IndexModel : PageModel
     public int? Number3 { get; set; }
 
     public int? Result { get; private set; }
+    public int? MaxValue { get; private set; }
+    public int? MinValue { get; private set; }
+    
+    // declare a list of integers to store the numbers
+    public List<int> Numbers { get; set; } = new List<int>();
 
     public void OnPost()
     {
       Console.WriteLine(Number1+Number2+Number3);
-
-      if (Number1.HasValue && Number2.HasValue && Number3.HasValue )
+      if (Number1.HasValue)
       {
-          Result = Number1 + Number2 + Number3;
+          Numbers.Add(Number1.Value);
+          
       }
+      if (Number2.HasValue)
+      {
+          Numbers.Add(Number2.Value);
+            
+      }
+      if (Number3.HasValue)
+      {
+          Numbers.Add(Number3.Value);
+            
+      }
+
+      Result = Numbers.Sum();
+      MaxValue = Numbers.Max();
+      MinValue = Numbers.Min();
       Console.WriteLine(Result);
     }
 }
