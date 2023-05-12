@@ -26,10 +26,12 @@
         <button type="submit" class="btn btn-primary" >Calculate</button>
 
     </form>
-    @if(Model.Result != null)
+    @if(Model.Total != null)
     {
-        <p>Sum: @Model.Result</p>
-        <p>Max: @Model.MaxValue</p>
-        <p>Min: @Model.MinValue</p>
+        <p>You entered: @Model.Counter below are their stats</p>
+        <p>Total: @Model.Total</p>
+        <p>Maximum: @Model.MaxValue</p>
+        <p>Minimum: @Model.MinValue</p>
+        <p> Average: @Model.Average</p>                           
     }
 </div>
