@@ -10,17 +10,17 @@
     <form method="post">
         <div>
             <label for="Number1">Number 1</label>
-            <input type="number" id="Number1" name="Number1"/>
+            <input type="number" id="Number1" name="Number1" value=@($"{Model.Number1}") />
         </div>
         
         <div>
             <label for="Number2">Number 2</label>
-            <input type="number" id="Number2" name="Number2"/>
+            <input type="number" id="Number2" name="Number2" value=@($"{Model.Number2}")/>
         </div>
         
         <div>
             <label for="Number3">Number 3</label>
-            <input type="number" id="Number3" name="Number3"/>
+            <input type="number" id="Number3" name="Number3" value=@($"{Model.Number3}")/>
         </div>
         
         <button type="submit" class="btn btn-primary" >Calculate</button>
